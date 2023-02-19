@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- thanks to https://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="194x194" href="../favicons/favicon-194x194.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+		<link rel="manifest" href="../favicons/manifest.json">
+		<link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1">
+		<link href="style.css" rel="stylesheet">
+		<title>RX Maker 1.2</title>
+	</head>
+	<body>
+		<div id="center">
+			<div id="help" onclick="this.parentElement.style.transform='translateY(-100vh)'">
+				<h1>RX Maker 1.2</h1>
+				<br/>
+				This is a simple track maker for RX Racing! There are 4 different things you can create:
+				<p><b>Walls</b>- All you literally have to do is just click and drag to make a wall.</p>
+				<p><b>Starting Lines & Checkpoints</b>- Same mechanism for making walls. When the game uses these, it will make the first one you placed on your map the starting or finishing line, and the second one into a checkpoint. You can only place one of each. Make sure you do place a checkpoint line or else the lap system will cease to function.</p>
+				<p><b>Trees</b>- You just have to click anywhere to place one, or drag your cursor to create a whole forest!</p>
+				<p><b>Arrows</b>- Click and drag to make an arrow. You will notice it's pretty much like a wall, but with a fixed length. Whichever way it the arrow is "pointing" on the map, it will be in the direction the arrow is facing.</p>
+				The three other buttons aren't objects that can be placed.
+				<p><b>Eraser</b>- Pretty simple tool, although when you try to erase walls or checkpoints, don't click on the line itself. It won't work. Instead, you have click on the endpoint of the line. You can also use <b>Ctrl-Z</b> to undo.</p>
+				<p><b>Export</b>- When you click the <b>Export</b> button, it opens a new tab with a bunch of numbers and symbols on it. Just press <b>Ctrl-A</b> to select all of it and <b>Ctrl-C</b> it to copy it. You use that to import the map into the game.</p>
+				<p><b>Help</b>- Clicking the <b>Help</b> button will open this menu.<p>
+				Once you've made a map for RX Racing, go to the <a href="https://www.rxracing.online">RX Racing</a> website and press <b>Ctrl-I</b> on your keybaord whilst at the main menu. You will see a popup asking for "Track data?". Paste your track code into the prompt, put in a username and car color, and you're good to go. If you host the game, all players who joined your game will also use your map. Have fun!
+				<p style="text-align: center"><b style="color: red">Click anywhere in this box to close it.</b></p>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="button selected" onclick="select(0)">Walls</div>
+			<div class="button" onclick="select(1)">Start</div>
+			<div class="button" onclick="select(2)">Trees</div>
+			<div class="button" onclick="select(3)">Arrows</div>
+			<div class="button" onclick="select(4)">Erase</div>
+			<div class="button" onclick="exp()">Export</div>
+			<div class="button big" onclick="help()">?</div>
+		</div>
+		<canvas id="c"></canvas>
+		<script src="script.js"></script>
+	</body>
+</html>
