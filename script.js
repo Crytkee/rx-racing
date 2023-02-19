@@ -300,7 +300,7 @@ updateColor();
 
 menu2 = function(){
 	if(document.getElementById("name").value == "")
-		name = "Nerd with No Name";
+		name = "A no-named Nerd 🤓";
 	else
 		name = document.getElementById("name").value;
 	VR = document.getElementById("cardboard").className == "tools sel";
@@ -1126,5 +1126,5 @@ if(mobile){
 
 document.body.onkeydown = function(e){
 	if(e.keyCode == 73 && (e.ctrlKey || e.metaKey))
-		document.getElementById("trackcode").innerHTML = prompt("Track data?")
+		document.getElementById("trackcode").innerHTML = prompt("Input your track code below.")
 }

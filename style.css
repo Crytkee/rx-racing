@@ -356,7 +356,7 @@ input{
 	        transform: scale(0.9);
 }
 .label{
-	font-family: "Press Start 2P";
+	font-family: "Arial";
 	color: white;
 	text-shadow: 0 0 1vmin black;
 	display: inline-block;
